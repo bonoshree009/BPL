@@ -1,6 +1,6 @@
 [
   {
-    "playerImg": "https://example.com/images/virat_kohli.jpg",
+    "playerImg": "https://i.ibb.co/Kj0rmKks/Virat-Kohli-in-PMO-New-Delhi.jpg",
     "playerName": "Virat Kohli",
     "playerCountry": "India",
     "playingRole": "Batsman",
@@ -10,7 +10,7 @@
     "price": 1500000
   },
   {
-    "playerImg": "https://example.com/images/steve_smith.jpg",
+    "playerImg": "https://i.ibb.co/nsyT4y5B/images.jpg",
     "playerName": "Steve Smith",
     "playerCountry": "Australia",
     "playingRole": "Batsman",
@@ -20,7 +20,7 @@
     "price": 1400000
   },
   {
-    "playerImg": "https://example.com/images/ben_stokes.jpg",
+    "playerImg": "https://i.ibb.co/xqwSzSTn/gettyimages-1472307522-1-1680093625.jpg",
     "playerName": "Ben Stokes",
     "playerCountry": "England",
     "playingRole": "All-rounder",
@@ -30,7 +30,7 @@
     "price": 1300000
   },
   {
-    "playerImg": "https://example.com/images/babar_azam.jpg",
+    "playerImg": "https://i.ibb.co/1YBT8czF/AFP-20240530-34-UE7-A9-v1-High-Res-776146379-",
     "playerName": "Babar Azam",
     "playerCountry": "Pakistan",
     "playingRole": "Batsman",
@@ -40,7 +40,7 @@
     "price": 1450000
   },
   {
-    "playerImg": "https://example.com/images/rashid_khan.jpg",
+    "playerImg": "https://i.ibb.co/gZbv3NdV/images-1.jpg",
     "playerName": "Rashid Khan",
     "playerCountry": "Afghanistan",
     "playingRole": "Bowler",
@@ -50,7 +50,7 @@
     "price": 1200000
   },
   {
-    "playerImg": "https://example.com/images/trent_boult.jpg",
+    "playerImg": "https://i.ibb.co/3yKV77YN/images-3.jpg",
     "playerName": "Trent Boult",
     "playerCountry": "New Zealand",
     "playingRole": "Bowler",
@@ -60,7 +60,7 @@
     "price": 1100000
   },
   {
-    "playerImg": "https://example.com/images/shakib_al_hasan.jpg",
+    "playerImg": "1717617996.webp",
     "playerName": "Shakib Al Hasan",
     "playerCountry": "Bangladesh",
     "playingRole": "All-rounder",
