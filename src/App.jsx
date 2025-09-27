@@ -31,7 +31,7 @@ const playersPromise = fetchPlayers()
   </div>
 
 {
-  toggle === true? <Suspense fallback={<h1>Data Loading</h1>}>
+  toggle === true? <Suspense fallback={<h1 className='text-4xl text-black text-center font-bold'>Data Loading</h1>}>
     <Availableplayers  playersPromise={ playersPromise}> </Availableplayers> </Suspense> : <Selectedplayers></Selectedplayers>
 
 }
