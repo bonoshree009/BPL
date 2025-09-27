@@ -1,7 +1,12 @@
 import React from 'react';
 
-const Selectedplayers = ({purchersplayers}) => {
-     console.log(purchersplayers)
+const Selectedplayers = ({purchersplayers,remove}) => {
+    
+     const eventhandle = (data) => {
+        
+        //console.log(data)
+        remove(data)
+     }
     return (
         <div className='my-10'>
 
@@ -13,7 +18,7 @@ const Selectedplayers = ({purchersplayers}) => {
             <div className=''><h1 className='text-xl text-black font-bold'>{data.playerName}</h1>
             <p className='text-gray-500'>{data.battingStyle}</p></div>
             </div>
-            <div><h1 className='text-red-700 font-bold text-2xl'>delete</h1></div>
+            <div onClick={() =>eventhandle(data)}><img src="https://i.ibb.co/FLpd3pTs/Vector.png" alt="" /></div>
                </div>
 
 ))}
