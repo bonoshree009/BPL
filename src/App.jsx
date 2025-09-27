@@ -2,9 +2,9 @@ import { Suspense, useState } from 'react'
 import './App.css'
 import navImg from "./assets/logo.png"
 import Availableplayers from './components/availablePlayers/Availableplayers'
-
 import Banner from './components/Banner'
 import Selectedplayers from './components/selectedPlayers/Selectedplayers'
+  import { ToastContainer } from 'react-toastify';
 
  const fetchPlayers = async() =>{
     const res = await fetch("/public/players.json")
@@ -14,7 +14,7 @@ const playersPromise = fetchPlayers()
 function App() {
 
  const [toggle, settoggole] = useState (true)
- const [availBalance ,setavailBalance] = useState (6000000)
+ const [availBalance ,setavailBalance] = useState (60000000)
  const [purchersplayers,setpurchersplayers] = useState([])
  const remove = (player) =>{
 
@@ -43,12 +43,12 @@ setpurchersplayers (removeplayer)
 {
   toggle === true? <Suspense fallback={<h1 className='text-4xl text-black text-center font-bold'>Data Loading</h1>}>
     <Availableplayers  playersPromise={ playersPromise} availBalance= {availBalance} setavailBalance={setavailBalance} purchersplayers={purchersplayers} setpurchersplayers={setpurchersplayers} >
-       </Availableplayers> </Suspense> : <Selectedplayers purchersplayers= {purchersplayers} remove ={remove}></Selectedplayers>
+       </Availableplayers> </Suspense> : <Selectedplayers purchersplayers= {purchersplayers} remove ={remove} gotoAvail= {() =>{settoggole(true)}}> </Selectedplayers>
 
 }
   
 
-
+<ToastContainer/>
  
     </>
   )

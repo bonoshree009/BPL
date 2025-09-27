@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import user1 from "../../assets/user1.png";
 
 import flag from "../../assets/report 1.png";
+import { toast } from 'react-toastify';
 
 const Cardplayer = ({data,availBalance,setavailBalance,purchersplayers ,setpurchersplayers}) => {
 
@@ -29,16 +30,21 @@ const Cardplayer = ({data,availBalance,setavailBalance,purchersplayers ,setpurch
         <p className='font-bold'> Price: {data.price}</p>
        <button  disabled={Selected}  onClick={() => { 
           if(availBalance > data.price ){
-             setSelected(true)
+            if( purchersplayers.length < 6){
+                setSelected(true)
              setavailBalance (availBalance - data.price)
-          }
-           else{alert( "you have not sufficiant balance ")}        
-
+             
           setpurchersplayers([...purchersplayers ,data])
+            }
+                else{  toast("you can not select more than 6 players") }
+        }
+           else{toast( "you have not sufficiant balance ")}        
+
+         
          
 }}
         
-        className={`px-2 text-[12px] border-gray-200 border-2 rounded-xl ${Selected ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-white text-gray-500'}`}>
+        className={`px-2 text-[12px] border-gray-200 border-2 rounded-xl ${Selected ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-amber-400 text-black'}`}>
   {Selected ? "selected" : "choose player"}
 </button>
 

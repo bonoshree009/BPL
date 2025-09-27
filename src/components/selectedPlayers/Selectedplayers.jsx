@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { } from 'react';
+import Availableplayers from '../availablePlayers/Availableplayers';
 
-const Selectedplayers = ({purchersplayers,remove}) => {
+const Selectedplayers = ({purchersplayers,remove,gotoAvail}) => {
+
     
      const eventhandle = (data) => {
-        
-        //console.log(data)
         remove(data)
      }
+
     return (
         <div className='my-10'>
 
@@ -23,7 +24,7 @@ const Selectedplayers = ({purchersplayers,remove}) => {
 
 ))}
          
-             <button className='btn bg-amber-300 rounded-xl border-0'>Add More Player</button>
+             <button onClick={gotoAvail} className='btn bg-amber-300 rounded-xl border-0'>Add More Player</button>
         </div>
     );
 };
