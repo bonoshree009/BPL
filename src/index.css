@@ -1,12 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* index.css */
+
 body ,html{
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: white; /* পুরো পেজে white background */
+    background-color: white; 
 
 }
 body {

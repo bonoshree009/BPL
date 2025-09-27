@@ -2,8 +2,9 @@ import { Suspense } from 'react'
 import './App.css'
 import navImg from "./assets/logo.png"
 import Availableplayers from './components/availablePlayers/Availableplayers'
-import Selectedplayers from './components/availablePlayers/selectedPlayers/Selectedplayers'
+
 import Banner from './components/Banner'
+import Selectedplayers from './components/selectedPlayers/Selectedplayers'
 
  const fetchPlayers = async() =>{
     const res = await fetch("/public/players.json")
