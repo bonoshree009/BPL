@@ -3,7 +3,7 @@ import user1 from "../../assets/user1.png";
 
 import flag from "../../assets/report 1.png";
 
-const Cardplayer = ({data}) => {
+const Cardplayer = ({data,availBalance,setavailBalance,purchersplayers ,setpurchersplayers}) => {
 
 
     const [Selected ,setSelected] = useState (false)
@@ -27,7 +27,18 @@ const Cardplayer = ({data}) => {
 
      <div className='flex justify-between items-center'>
         <p className='font-bold'> Price: {data.price}</p>
-       <button  disabled={Selected}  onClick={() => setSelected(true)} className={`px-2 text-[12px] border-gray-200 border-2 rounded-xl ${Selected ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-white text-gray-500'}`}>
+       <button  disabled={Selected}  onClick={() => { 
+          if(availBalance > data.price ){
+             setSelected(true)
+             setavailBalance (availBalance - data.price)
+          }
+           else{alert( "you have not sufficiant balance ")}        
+
+          setpurchersplayers([...purchersplayers ,data])
+         
+}}
+        
+        className={`px-2 text-[12px] border-gray-200 border-2 rounded-xl ${Selected ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-white text-gray-500'}`}>
   {Selected ? "selected" : "choose player"}
 </button>
 
