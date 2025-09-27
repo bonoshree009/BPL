@@ -17,7 +17,7 @@ function App() {
  const [availBalance ,setavailBalance] = useState (60000000)
  const [purchersplayers,setpurchersplayers] = useState([])
  const remove = (player) =>{
-
+           setavailBalance (availBalance + player.price)
 const removeplayer = purchersplayers.filter(ply => ply.playerName !== player.playerName)
 setpurchersplayers (removeplayer)
          

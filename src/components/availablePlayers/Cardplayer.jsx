@@ -33,8 +33,8 @@ const Cardplayer = ({data,availBalance,setavailBalance,purchersplayers ,setpurch
             if( purchersplayers.length < 6){
                 setSelected(true)
              setavailBalance (availBalance - data.price)
-             
           setpurchersplayers([...purchersplayers ,data])
+          toast("player Selected")
             }
                 else{  toast("you can not select more than 6 players") }
         }
